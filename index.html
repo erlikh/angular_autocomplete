@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>asAutocomplete</title>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="services/key_codes.js"></script>
+  <script type="text/javascript" src="services/fetcher.js"></script>
+  <script type="text/javascript" src="directives/autocomplete.js"></script>
+  <link rel="stylesheet" href="css/autocomplete.css"/>
+</head>
+<body ng-app="Autocomplete">
+  <div>
+    <as-autocomplete min-length="3" fetcher="JetRadarPlacesFetcher">
+      <as-autocomplete-item>
+        {{item.name}} {{item.city_name}}
+      </as-autocomplete-item>
+      <as-autocomplete-input>
+        <input type="text" placeholder="Origin" ng-model="search.title"/>
+        <input type="text" ng-model="search.code" disabled="true"/>
+      </as-autocomplete-input>
+    </as-autocomplete>
+  </div>
+</body>
+</html>

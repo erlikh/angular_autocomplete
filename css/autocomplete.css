@@ -1,0 +1,10 @@
+.as_autocomplete_results {
+  position: fixed;
+  display: none;
+}
+.as_autocomplete_results.on {
+   display: block;
+}
+.highlight {
+  background-color: dodgerblue;
+}
